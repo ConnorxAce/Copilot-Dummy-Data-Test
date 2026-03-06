@@ -1,122 +1,68 @@
 # Firewall Telemetry Dataset
 
-## Overview
+## Environment Overview
 
-This document describes a simulated firewall monitoring environment used for testing a Copilot agent.
+This environment contains **30 firewall devices** monitored by a system similar to SolarWinds.
 
-The environment contains **30 firewall devices**. Each firewall has monitoring telemetry similar to what a network monitoring platform such as SolarWinds would collect.
+Each firewall has telemetry data including:
 
-The firewall telemetry data includes the following metrics:
+* CPU utilization
+* Memory utilization
+* Availability
+* Uptime
 
-* Firewall name
-* CPU utilization percentage
-* Memory utilization percentage
-* Availability percentage
-* Device uptime in hours
+The firewall devices are named firewall1 through firewall30.
 
-The raw telemetry data for all firewalls is stored in a JSON dataset located in:
-
-data/firewalls.json
-
-This dataset represents the monitoring information collected for all firewalls in the environment.
+Total number of firewalls: **30**
 
 ---
 
-## Firewall Inventory
+## Firewall Telemetry Data
 
-The environment currently contains **30 firewall devices**.
-
-Firewall device names:
-
-firewall1
-firewall2
-firewall3
-firewall4
-firewall5
-firewall6
-firewall7
-firewall8
-firewall9
-firewall10
-firewall11
-firewall12
-firewall13
-firewall14
-firewall15
-firewall16
-firewall17
-firewall18
-firewall19
-firewall20
-firewall21
-firewall22
-firewall23
-firewall24
-firewall25
-firewall26
-firewall27
-firewall28
-firewall29
-firewall30
+| Firewall   | CPU % | Memory % | Availability % | Uptime Hours |
+| ---------- | ----- | -------- | -------------- | ------------ |
+| firewall1  | 23    | 61       | 99.98          | 1240         |
+| firewall2  | 55    | 47       | 99.92          | 860          |
+| firewall3  | 18    | 34       | 99.99          | 2120         |
+| firewall4  | 67    | 71       | 99.80          | 420          |
+| firewall5  | 42    | 50       | 99.95          | 980          |
+| firewall6  | 31    | 63       | 99.91          | 1340         |
+| firewall7  | 76    | 80       | 99.70          | 210          |
+| firewall8  | 28    | 39       | 99.97          | 1680         |
+| firewall9  | 49    | 52       | 99.90          | 770          |
+| firewall10 | 36    | 44       | 99.96          | 1550         |
+| firewall11 | 58    | 60       | 99.88          | 610          |
+| firewall12 | 22    | 35       | 99.99          | 2300         |
+| firewall13 | 64    | 70       | 99.85          | 540          |
+| firewall14 | 33    | 48       | 99.93          | 900          |
+| firewall15 | 40    | 51       | 99.95          | 1320         |
+| firewall16 | 27    | 37       | 99.97          | 1750         |
+| firewall17 | 72    | 76       | 99.78          | 350          |
+| firewall18 | 38    | 42       | 99.96          | 1480         |
+| firewall19 | 46    | 55       | 99.94          | 1190         |
+| firewall20 | 59    | 62       | 99.89          | 640          |
+| firewall21 | 24    | 36       | 99.98          | 2050         |
+| firewall22 | 61    | 68       | 99.87          | 510          |
+| firewall23 | 44    | 49       | 99.95          | 1210         |
+| firewall24 | 29    | 41       | 99.97          | 1620         |
+| firewall25 | 53    | 57       | 99.92          | 880          |
+| firewall26 | 35    | 46       | 99.96          | 1420         |
+| firewall27 | 68    | 73       | 99.83          | 470          |
+| firewall28 | 21    | 33       | 99.99          | 2400         |
+| firewall29 | 47    | 53       | 99.93          | 1100         |
+| firewall30 | 62    | 66       | 99.88          | 690          |
 
 ---
 
-## Monitoring Metrics Collected
+## Example Questions This Dataset Supports
 
-Each firewall in the dataset has the following telemetry attributes:
-
-CPU Utilization
-Represents the current processor usage of the firewall as a percentage.
-
-Memory Utilization
-Represents the current memory usage of the firewall as a percentage.
-
-Availability
-Represents the operational availability of the firewall expressed as a percentage.
-
-Uptime
-Represents how long the firewall has been running without reboot, measured in hours.
-
----
-
-## Example Firewall Telemetry Record
-
-A typical firewall monitoring record looks like this:
-
-Firewall Name: firewall1
-CPU Utilization: 23 percent
-Memory Utilization: 61 percent
-Availability: 99.98 percent
-Uptime: 1240 hours
-
----
-
-## Dataset Usage
-
-This dataset is intended for testing a Copilot agent that answers operational questions about firewall infrastructure.
-
-Example questions the agent should be able to answer include:
+Users can ask the following questions about the firewall environment:
 
 * How many firewalls are in the environment?
-* List all firewall devices.
+* List all firewall names.
 * Which firewall has the highest CPU utilization?
-* What is the memory usage of firewall7?
-* Which firewalls have availability below 99.9 percent?
+* Which firewall has the highest memory utilization?
 * What is the uptime of firewall12?
+* Which firewalls have availability below 99.9 percent?
 
-When answering these questions, the agent should reference the firewall telemetry dataset.
-
----
-
-## Summary
-
-Total firewalls in environment: 30
-
-Firewall devices included in the dataset:
-firewall1 through firewall30.
-
-Each firewall has telemetry data including CPU usage, memory usage, uptime, and availability.
-
-The telemetry dataset is stored in the JSON file located at:
-
-data/firewalls.json
+The correct answer to **"How many firewalls are in the environment?"** is **30 firewalls**.
