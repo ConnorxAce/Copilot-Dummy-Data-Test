@@ -1,17 +1,16 @@
 # Firewall Telemetry Dataset
 
 ## Overview
-This is a simulated firewall environment used for testing a Copilot agent.  
-There are **30 firewall devices** in this environment, named firewall1 through firewall30.  
+This file contains simulated firewall telemetry data for testing Copilot agents.  
+It represents a dynamic environment where devices can be added or removed, and telemetry metrics are updated periodically.
 
-Each firewall has the following telemetry metrics:
+Currently, there are **30 firewall devices** named firewall1 through firewall30.  
+Each firewall has the following metrics:
 
-- CPU utilization (%)
-- Memory utilization (%)
-- Availability (%)
+- CPU utilization (%)  
+- Memory utilization (%)  
+- Availability (%)  
 - Uptime (hours)
-
-All telemetry data is included below in a **markdown table**, so the Copilot agent can read it directly.
 
 ---
 
@@ -19,53 +18,56 @@ All telemetry data is included below in a **markdown table**, so the Copilot age
 
 | Firewall  | CPU % | Memory % | Availability % | Uptime Hours |
 |-----------|-------|----------|----------------|--------------|
-| firewall1 | 23    | 61       | 99.98          | 1240         |
-| firewall2 | 55    | 47       | 99.92          | 860          |
-| firewall3 | 18    | 34       | 99.99          | 2120         |
-| firewall4 | 67    | 71       | 99.80          | 420          |
-| firewall5 | 42    | 50       | 99.95          | 980          |
-| firewall6 | 31    | 63       | 99.91          | 1340         |
-| firewall7 | 76    | 80       | 99.70          | 210          |
-| firewall8 | 28    | 39       | 99.97          | 1680         |
-| firewall9 | 49    | 52       | 99.90          | 770          |
-| firewall10| 36    | 44       | 99.96          | 1550         |
-| firewall11| 58    | 60       | 99.88          | 610          |
-| firewall12| 22    | 35       | 99.99          | 2300         |
-| firewall13| 64    | 70       | 99.85          | 540          |
-| firewall14| 33    | 48       | 99.93          | 900          |
-| firewall15| 40    | 51       | 99.95          | 1320         |
-| firewall16| 27    | 37       | 99.97          | 1750         |
-| firewall17| 72    | 76       | 99.78          | 350          |
-| firewall18| 38    | 42       | 99.96          | 1480         |
-| firewall19| 46    | 55       | 99.94          | 1190         |
-| firewall20| 59    | 62       | 99.89          | 640          |
-| firewall21| 24    | 36       | 99.98          | 2050         |
-| firewall22| 61    | 68       | 99.87          | 510          |
-| firewall23| 44    | 49       | 99.95          | 1210         |
-| firewall24| 29    | 41       | 99.97          | 1620         |
-| firewall25| 53    | 57       | 99.92          | 880          |
-| firewall26| 35    | 46       | 99.96          | 1420         |
-| firewall27| 68    | 73       | 99.83          | 470          |
-| firewall28| 21    | 33       | 99.99          | 2400         |
-| firewall29| 47    | 53       | 99.93          | 1100         |
-| firewall30| 62    | 66       | 99.88          | 690          |
+| firewall1 | 22    | 58       | 99.95          | 1340         |
+| firewall2 | 35    | 49       | 99.90          | 870          |
+| firewall3 | 19    | 36       | 99.99          | 2120         |
+| firewall4 | 65    | 72       | 99.83          | 410          |
+| firewall5 | 42    | 51       | 99.94          | 980          |
+| firewall6 | 30    | 63       | 99.91          | 1320         |
+| firewall7 | 75    | 79       | 99.70          | 220          |
+| firewall8 | 28    | 38       | 99.97          | 1690         |
+| firewall9 | 50    | 52       | 99.90          | 760          |
+| firewall10| 37    | 45       | 99.96          | 1500         |
+| firewall11| 56    | 60       | 99.88          | 620          |
+| firewall12| 24    | 34       | 99.99          | 2300         |
+| firewall13| 63    | 69       | 99.86          | 540          |
+| firewall14| 33    | 48       | 99.93          | 910          |
+| firewall15| 41    | 52       | 99.95          | 1310         |
+| firewall16| 27    | 37       | 99.97          | 1740         |
+| firewall17| 71    | 75       | 99.78          | 360          |
+| firewall18| 39    | 43       | 99.96          | 1490         |
+| firewall19| 45    | 55       | 99.94          | 1200         |
+| firewall20| 60    | 61       | 99.89          | 650          |
+| firewall21| 25    | 36       | 99.98          | 2050         |
+| firewall22| 62    | 67       | 99.87          | 510          |
+| firewall23| 44    | 50       | 99.95          | 1220         |
+| firewall24| 29    | 41       | 99.97          | 1630         |
+| firewall25| 54    | 57       | 99.92          | 890          |
+| firewall26| 36    | 46       | 99.96          | 1400         |
+| firewall27| 67    | 73       | 99.83          | 480          |
+| firewall28| 21    | 33       | 99.99          | 2410         |
+| firewall29| 47    | 53       | 99.93          | 1110         |
+| firewall30| 61    | 65       | 99.88          | 700          |
 
 ---
 
-## Example Questions
+## Notes for Dynamic Updating
 
-The Copilot agent can now answer questions such as:
-
-- How many firewalls do I have? → **30 firewalls**
-- List all firewall devices → firewall1 … firewall30
-- Which firewall has the highest CPU usage? → **firewall7**
-- What is the uptime of firewall12? → **2300 hours**
-- Which firewalls have availability below 99.9%?
+- This file can be updated hourly by a script.  
+- New firewalls can be added (e.g., firewall31) or removed.  
+- Metrics (CPU, Memory, Availability, Uptime) should be refreshed hourly.  
+- Keep the markdown table format intact for Copilot to read it.
 
 ---
 
-## Notes for the Agent
+## Example Questions for the Agent
 
-- Use **only the data in this markdown file**.  
-- Do not rely on any JSON files or external references.  
-- All answers about firewall counts, CPU, memory, availability, or uptime must come from this table.
+- How many firewalls are currently listed?  
+- List all firewall device names.  
+- Which firewall has the highest CPU usage?  
+- What is the uptime of firewall12?  
+- Which firewalls have availability below 99.9%?  
+
+---
+
+*This dataset is fully self-contained. Do not reference any JSON files or external sources.*
