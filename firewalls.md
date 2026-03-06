@@ -1,17 +1,17 @@
 # Firewall Telemetry Dataset
 
 ## Overview
-This is a simulated firewall environment used for testing Copilot agents.  
-There are **30 firewall devices** in this environment named firewall1 through firewall30.  
+This is a simulated firewall environment used for testing a Copilot agent.  
+There are **30 firewall devices** in this environment, named firewall1 through firewall30.  
 
-Each firewall has telemetry metrics:
+Each firewall has the following telemetry metrics:
 
 - CPU utilization (%)
 - Memory utilization (%)
 - Availability (%)
 - Uptime (hours)
 
-All data is included below in a markdown table so Copilot can read it directly.
+All telemetry data is included below in a **markdown table**, so the Copilot agent can read it directly.
 
 ---
 
@@ -54,10 +54,18 @@ All data is included below in a markdown table so Copilot can read it directly.
 
 ## Example Questions
 
-You can ask Copilot agent questions like:
+The Copilot agent can now answer questions such as:
 
-- “How many firewalls do I have?” → 30  
-- “List all firewall devices” → firewall1 … firewall30  
-- “Which firewall has the highest CPU usage?” → firewall7  
-- “What is the uptime of firewall12?” → 2300 hours  
-- “Which firewalls have availability below 99.9%?”
+- How many firewalls do I have? → **30 firewalls**
+- List all firewall devices → firewall1 … firewall30
+- Which firewall has the highest CPU usage? → **firewall7**
+- What is the uptime of firewall12? → **2300 hours**
+- Which firewalls have availability below 99.9%?
+
+---
+
+## Notes for the Agent
+
+- Use **only the data in this markdown file**.  
+- Do not rely on any JSON files or external references.  
+- All answers about firewall counts, CPU, memory, availability, or uptime must come from this table.
